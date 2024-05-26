@@ -6,9 +6,14 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"rest-api/models"
+
+	"rest-api/db"
 )
 
 func main() {
+	// initialize db
+	db.InitDB()
+
 	r := gin.Default()
 
 	// routes
